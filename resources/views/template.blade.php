@@ -47,6 +47,23 @@
                         @endauth
                     </ul>
                     <ul class="navbar-nav ms-auto">
+                        <li class="nav-item dropdown d-flex align-items-center justify-content-center">
+                            <a class="nav-link dropdown-toggle text-white" href="#" id="languageDropdown"
+                                role="button" data-bs-toggle="dropdown" aria-expanded="false"
+                                style="font-size: 1.2rem;">
+                                {{ __('template.language') }}
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
+                                <li>
+                                    <a class="dropdown-item {{ app()->getLocale() == 'en' ? 'active' : '' }}"
+                                        href="{{ url('locale/en') }}">English</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item {{ app()->getLocale() == 'id' ? 'active' : '' }}"
+                                        href="{{ url('locale/id') }}">Bahasa Indonesia</a>
+                                </li>
+                            </ul>
+                        </li>
                         @guest
                             <li class="nav-item">
                                 <a class="nav-link {{ request()->is('register') ? 'active fw-bold text-success' : 'text-white' }}"
@@ -64,23 +81,6 @@
                             </li>
                         @endguest
                         @auth
-                            <li class="nav-item dropdown d-flex align-items-center justify-content-center">
-                                <a class="nav-link dropdown-toggle text-white" href="#" id="languageDropdown"
-                                    role="button" data-bs-toggle="dropdown" aria-expanded="false"
-                                    style="font-size: 1.2rem;">
-                                    {{ __('template.language') }}
-                                </a>
-                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
-                                    <li>
-                                        <a class="dropdown-item {{ app()->getLocale() == 'en' ? 'active' : '' }}"
-                                            href="{{ url('locale/en') }}">English</a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item {{ app()->getLocale() == 'id' ? 'active' : '' }}"
-                                            href="{{ url('locale/id') }}">Bahasa Indonesia</a>
-                                    </li>
-                                </ul>
-                            </li>
                             <li class="nav-item dropdown d-flex align-items-center justify-content-center">
                                 <a class="nav-link dropdown-toggle text-white d-flex justify-content-center align-items-center"
                                     href="#" id="profileDropdown" role="button" data-bs-toggle="dropdown"
