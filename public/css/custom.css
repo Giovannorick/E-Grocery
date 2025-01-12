@@ -1,0 +1,9 @@
+.custom-border {
+    height: 600px;
+    width: 600px;
+    border-color: #dc9e82 !important;
+}
+
+.custom-text {
+    color: #030027;
+}
