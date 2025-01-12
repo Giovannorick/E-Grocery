@@ -4,7 +4,8 @@ return [
     'cart' => 'Keranjang',
     'profile' => 'Profil',
     'maintenance' => 'Pengaturan Akun',
-    'logout'=> 'Keluar',
+    'logout' => 'Keluar',
     'register' => 'Registrasi',
     'login' => 'Masuk',
+    'language' => 'ID',
 ];

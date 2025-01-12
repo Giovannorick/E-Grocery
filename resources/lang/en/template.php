@@ -4,7 +4,8 @@ return [
     'cart' => 'Cart',
     'profile' => 'Profile',
     'maintenance' => 'Account Maintenance',
-    'logout'=> 'Logout',
+    'logout' => 'Logout',
     'register' => 'Register',
     'login' => 'Login',
+    'language' => 'EN',
 ];
