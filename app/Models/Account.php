@@ -1,5 +1,7 @@
 <?php
+
 namespace App\Models;
+
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -40,13 +42,16 @@ class Account extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function order() {
+    public function order()
+    {
         return $this->hasMany(Order::class, "account_id", "id");
     }
-    public function role() {
+    public function role()
+    {
         return $this->hasOne(Role::class, "id", "role_id");
     }
-    public function gender() {
+    public function gender()
+    {
         return $this->hasOne(Gender::class, "id", "gender_id");
     }
 }

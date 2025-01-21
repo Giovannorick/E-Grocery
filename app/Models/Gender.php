@@ -9,7 +9,8 @@ class Gender extends Model
 {
     use HasFactory;
 
-    public function user() {
+    public function user()
+    {
         return $this->belongsTo(Account::class, "gender_id", "id");
     }
 }
