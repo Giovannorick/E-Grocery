@@ -18,6 +18,9 @@ class CreateItemsTable extends Migration
             $table->string('item_name');
             $table->string('item_desc');
             $table->integer('price');
+            $table->string('image_url');
+            $table->unsignedBigInteger('category_id');
+            $table->foreign('category_id')->references('id')->on('categories');
             $table->timestamps();
         });
     }
