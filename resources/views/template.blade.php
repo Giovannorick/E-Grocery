@@ -39,14 +39,13 @@
                             </li>
                             @if (Auth::user()->role_id == 1)
                                 <li class="nav-item">
-                                    <a class="nav-link {{ request()->is('accountMaintenance') ? 'active fw-bold text-success' : 'text-white' }}"
-                                        href="/accountMaintenance"
-                                        style="font-size: 1.2rem;">{{ __('template.maintenance') }}</a>
+                                    <a class="nav-link {{ request()->is('account') ? 'active fw-bold text-success' : 'text-white' }}"
+                                        href="/manage-users" style="font-size: 1.2rem;">{{ __('template.account') }}</a>
                                 </li>
                             @endif
                         @endauth
                     </ul>
-                    <ul class="navbar-nav ms-auto">
+                    <ul class="navbar-nav ms-auto align-items-center justify-content-center">
                         <li class="nav-item dropdown d-flex align-items-center justify-content-center">
                             <a class="nav-link dropdown-toggle text-white" href="#" id="languageDropdown"
                                 role="button" data-bs-toggle="dropdown" aria-expanded="false"

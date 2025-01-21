@@ -3,7 +3,7 @@ return [
     'home' => 'Beranda',
     'cart' => 'Keranjang',
     'profile' => 'Profil',
-    'maintenance' => 'Pengaturan Akun',
+    'account' => 'Manajemen Akun',
     'logout' => 'Keluar',
     'register' => 'Registrasi',
     'login' => 'Masuk',

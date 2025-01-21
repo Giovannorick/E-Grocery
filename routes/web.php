@@ -43,7 +43,7 @@ Route::middleware('allowed')->group(function () {
     //Profile
     Route::get('/profile', [ProfileController::class, 'profile']);
     Route::post('/updateProfile', [ProfileController::class, 'updateProfile']);
-    
+
     //Carts
     Route::get('/buy/{id}/{price}', [OrderController::class, 'buy']);
     Route::get('/cart', [OrderController::class, 'cart']);
@@ -55,17 +55,9 @@ Route::middleware('allowed')->group(function () {
 
     Route::middleware('administrator')->group(function () {
         //Account Maintenance
-        Route::get('/accountMaintenance', [MaintenanceController::class, 'accountMaintenancePage']);
+        Route::get('/manage-users', [MaintenanceController::class, 'accountMaintenancePage']);
         Route::get('/updateRole/{id}', [MaintenanceController::class, 'updateRole']);
         Route::post('/updateRole', [MaintenanceController::class, 'updateAccRole']);
         Route::get('/deleteAccount/{id}', [MaintenanceController::class, 'deleteRole']);
     });
 });
-
-
-
-
-
-
-
-
